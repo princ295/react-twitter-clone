@@ -50,23 +50,23 @@ export const theme = createTheme({
   },
   components: {
     MuiButton: {
-     styleOverrides: {
-      root: {
-        borderRadius: 30,
-        textTransform: 'none',
-        fontSize: 16,
-        height: 40,
-        fontWeight: 600,
-        boxShadow: 'none'
-      },
-      textPrimary: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-      outlinedPrimary: {
-        borderColor: 'rgb(29, 161, 243)',
-      },
-     }
+      styleOverrides: {
+        root: {
+          borderRadius: 30,
+          textTransform: 'none',
+          fontSize: 16,
+          height: 40,
+          fontWeight: 600,
+          boxShadow: 'none'
+        },
+        textPrimary: {
+          paddingLeft: 20,
+          paddingRight: 20,
+        },
+        outlinedPrimary: {
+          borderColor: 'rgb(29, 161, 243)',
+        },
+      }
     },
     MuiFilledInput: {
       styleOverrides: {
@@ -85,11 +85,11 @@ export const theme = createTheme({
       }
     },
     MuiDialog: {
-     styleOverrides: {
-      paper: {
-        borderRadius: 15,
-      },
-     }
+      styleOverrides: {
+        paper: {
+          borderRadius: 15,
+        },
+      }
     },
     MuiDialogActions: {
       styleOverrides: {
@@ -99,23 +99,78 @@ export const theme = createTheme({
       }
     },
     MuiDialogTitle: {
-     styleOverrides: {
-      root: {
-        borderBottom: '1px solid rgb(204, 214, 221)',
-        marginBottom: 10,
-        padding: '10px 15px',
-        '& h2': {
-          display: 'flex',
-          alignItems: 'center',
-          fontWeight: 800,
-        },
-        '& button': {
-          padding: 8,
-          marginRight: 20,
+      styleOverrides: {
+        root: {
+          borderBottom: '1px solid rgb(204, 214, 221)',
+          marginBottom: 10,
+          padding: '10px 15px',
+          '& h2': {
+            display: 'flex',
+            alignItems: 'center',
+            fontWeight: 800,
+          },
+          '& button': {
+            padding: 8,
+            marginRight: 20,
+          },
         },
       },
     },
-     }
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+
+          '&:not(:first-child):not(:last-child)': {
+            width: 'fit-content',
+            height: "45px",
+            borderRadius: 30,
+            marginBottom: 15,
+          },
+
+          '&:hover:first-child': {
+            background: 'transparent',
+          },
+
+          '&:not(:first-child)': {
+            '& svg path': {
+              // fill: '#53575b'
+              fill: '#000'
+            }
+          },
+
+          '& div span': {
+            // color: '#53575b',
+            color: '#000'
+          },
+
+          '&:not(:last-child)': {
+            background: '',
+          },
+
+          '&:hover:not(:first-child):not(:last-child)': {
+            background: 'rgba(29, 161, 242, 0.1)',
+            color: 'rgb(29, 161, 242)',
+            '& svg path': {
+              background: 'rgba(29, 161, 242, 0.1)',
+              color: 'rgb(29, 161, 242)',
+            },
+
+            '& div span': {
+              color: 'rgb(29, 161, 242)',
+            }
+          }
+        }
+      }
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        root: {
+          color: 'rgb(20, 23, 26)',
+          fontSize: '20px'
+        }
+      }
+    }
+
   },
 });
 
